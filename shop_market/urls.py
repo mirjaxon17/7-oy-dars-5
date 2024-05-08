@@ -9,7 +9,7 @@ urlpatterns = [
     path('', include('category.urls')),
     path('', include('users.urls')),
     path('music/', include('music.urls')),
-    path('category/', include('API.urls')),
+    path('category/', include('api.urls')),
 
 ]
 urlpatterns +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

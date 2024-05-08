@@ -14,7 +14,6 @@ class CategoryListAPIViewSet(APIView):
         serializer = CategorySerializer(category, many=True)
         permission_classes = [IsAuthenticated]
         authentication_classes = [TokenAuthentication]
-
         filter_backends = (filters.SearchFilter,)
         search_fields = ('price','product__price',)
 class ProductlAPIViewSet(ModelViewSet):
